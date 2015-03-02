@@ -1,4 +1,4 @@
-describe('ctPointLabels', function () {
+describe('ctAccessibility', function () {
   'use strict';
 
   beforeEach(function () {
@@ -10,6 +10,6 @@ describe('ctPointLabels', function () {
   });
 
   it('should be defined in chartist', function () {
-    expect(window.Chartist.plugins.ctPointLabels).toBeDefined();
+    expect(window.Chartist.plugins.ctAccessibility).toBeDefined();
   });
 });
