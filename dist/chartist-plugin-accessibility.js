@@ -134,7 +134,7 @@
             // For line and bar charts we have multiple series and therefore also row headers
             var normalizedData = Chartist.normalizeDataArray(
               Chartist.getDataArray(
-                chart.data, chart.optionsProvider.currentOptions.reverseData), chart.data.labels.length);
+                chart.data, chart.optionsProvider.getCurrentOptions().reverseData), chart.data.labels.length);
 
             // Add column headers inclusing the series column header for the row headers
             [options.seriesHeader].concat(chart.data.labels).forEach(function (text) {
