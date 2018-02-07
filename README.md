@@ -8,31 +8,35 @@ Please visit http://gionkunz.github.io/chartist-js/plugins.html for more informa
 
 ```javascript
 var defaultOptions = {
-  // The caption will be used as table caption and will be read by the screen reader 
+  // The caption will be used as table caption and will be read by the screen reader
   // as an introduction to the content
   caption: 'A graphical chart',
-  
-  // The series header is used for Bar and Line charts where a table with row headers 
-  // will be created and represents the column header of the column used for the row headers. 
+
+  // The series header is used for Bar and Line charts where a table with row headers
+  // will be created and represents the column header of the column used for the row headers.
   // The seriesHeader should describe what the series represent as a group.
   seriesHeader: 'Series name',
-  
-  // Use value transform to make the chart data values more accessible. Format the numbers, 
+
+  // Use value transform to make the chart data values more accessible. Format the numbers,
   // add a unit or wrap them into a short sentence. The valueTransform function will receive the
-  // current value as parameter and the return value is used to represent the value in the 
+  // current value as parameter and the return value is used to represent the value in the
   // accessibility table.
   valueTransform: Chartist.noop,
-  
+
   // Add an optional summary to the accessibility that, in addition to caption, will provide
   // more detailed information about the chart. Describe what the data means and represents.
   summary: undefined,
-  
+
+  // Add an optional string of classes directly to <table class="">. Allows leverage of css frameworks
+  // like Bootstrap and Semantic UI
+  class: undefined,
+
   // Specify an ID that will be used for the accessibility container element. This can be a
   // String or a function that returns a String.
   elementId: function () {
     return 'ct-accessibility-table-' + (+new Date());
   },
-  
+
   // Override the style that is used to make the accessibility container visually hidden. This style was tested with
   // NVDA and JAWS (March 2, 2015)
   visuallyHiddenStyles: 'position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;'
