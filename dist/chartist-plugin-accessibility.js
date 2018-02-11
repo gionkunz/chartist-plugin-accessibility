@@ -68,6 +68,7 @@
       seriesHeader: 'Series name',
       valueTransform: Chartist.noop,
       summary: undefined,
+      class: undefined,
       elementId: function () {
         return 'ct-accessibility-table-' + (+new Date());
       },
@@ -104,7 +105,8 @@
 
           // Create table body with caption
           var tBody = element.elem('table', {
-            summary: options.summary
+            summary: options.summary,
+            class: options.class
           }).elem('caption')
             .text(options.caption)
             .elem('tbody');
